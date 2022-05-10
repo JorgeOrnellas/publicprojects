@@ -1,0 +1,21 @@
+#verificar preço de produto
+
+preço=float(input('Digite o preço do produto e em seguida selecione a forma de pagamento : '))
+forma=int(input('''Selecione uma opção :
+[1]A vista no dinheiro.
+[2]A vista no cartão.
+[3]Até 2x no cartão.
+[4]Em 3x ou mais no cartão.
+Selecione uma opção : '''))
+if forma ==1:
+    saldo=preço-(preço*0.1)
+    print('Com o desconto de 10%, o preço do seu produto é : R${:.2f}'.format(saldo))
+elif forma ==2:
+    saldo=preço-(preço*0.05)
+    print('Com o desconto de 5%, o preço do seu produto é : R${:.2f}'.format(saldo))
+elif forma ==3:
+    saldo=preço/2
+    print('Dessa forma o preço é de R${:.2f}, e o valor da parcela é R${:.2f}'.format(preço,saldo))
+elif forma ==4:
+    saldo = preço + (preço * 0.2)
+    print('Com o acrescimo o novo valor é de R${:.2f}'.format(saldo))
